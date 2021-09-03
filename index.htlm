@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+
+  <title>TokenTogetherMintery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/nearprotocol/near-api-js/dist/near-api-js.js" ></script>
+</head>
+
+<body>
+  <header>
+    <h1>Token Together Digital Mintery</h1>
+  </header>
+  <section id="events">
+    <h2>Create your token in only 4 steps.</h2>
+
+    <input type="text" placeholder="ex. AwesomeToken" v-on:input="setName($event)">
+    <p>Your Awesome Token Name: {{ tokenName }}</p>
+
+    <input type="text" placeholder="ex. AWSM" v-on:input="setSym($event)">
+    <p>Your Symbol here: {{ tokenSymbol }}</p>
+
+    <p>
+    <h2>How many tokens to you want?</h2>
+    <h3> There is no limit ;)</h3><br>
+    <button v-on:click="add(50)">
+      50</button>
+
+    </br>
+    <button v-on:click="add(1000)">
+      1,000</button>
+
+    <br>
+    <button v-on:click="add(1000000)">
+      1,000,000</button>
+
+    <br>
+    <button v-on:click="add(1000000000)">
+      1,000,000,000</button>
+
+    <br>
+    <button v-on:click="add(1000000000000)">
+      1,000,000,000,000</button>
+
+    <br>
+    <button value="counter" v-on:click="zeroOut">
+      0</button>
+
+    <h2> Total Supply: {{ counter }}</h2>
+    </p>
+
+    <p>
+    <h2>Please take a moment and confirm all the details are correct.*</h2>
+    <h2></h2>
+
+    <button id="minter" v-on:click="mint()" v-if="formIsValid = true">
+      Confirmed Awesome Mint My Tokens</button>
+    <h6>*by clicking 'Confirmed Awesome' you agree to our terms of service.</h6>
+    </p>
+
+
+  </section>
+
+</body>
+
+</html>
