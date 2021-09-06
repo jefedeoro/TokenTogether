@@ -1,15 +1,15 @@
 import "regenerator-runtime/runtime";
-import React, { useEffect } from "react";
+import React from "react";
 import { login, logout } from "./utils";
 import "./global.css";
-import UserForm from "./components/UserForm";
+// import UserForm from "./components/UserForm";
 import getConfig from "./config";
-import FunctionClick from "./components/FunctionClick";
-import ClassClick from "./components/ClassClick";
+// import FunctionClick from "./components/FunctionClick";
+// import ClassClick from "./components/ClassClick";
 import {
   Container,
-  Row,
-  Col,
+  // Row,
+  // Col,
   Button,
   Alert,
   Breadcrumb,
